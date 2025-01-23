@@ -79,7 +79,7 @@ SELECT p.name, d.name, p.age
 from departments d join people p on d.department_id = p.department_id
 where d.department_id = 1 ORDER BY age;
 
--- Q9(何時間も考えましたが分かりません、調べてもどう言うふうに調べればいいか分からなかったのでこのまま提出します)
+-- Q9
 select AVG(age) from people where gender = 2;
 
 -- Q10
