@@ -80,9 +80,7 @@ from departments d join people p on d.department_id = p.department_id
 where d.department_id = 1 ORDER BY age;
 
 -- Q9(何時間も考えましたが分かりません、調べてもどう言うふうに調べればいいか分からなかったのでこのまま提出します)
-SELECT d.name, avg(p.age) AS average_age
-from departments d join people p on d.department_id = p.department_id p GROUP BY gender
-where d.department_id = 2 and p.gender = 2;
+select AVG(age) from people where gender = 2;
 
 -- Q10
 SELECT p.name, d.name, r.content
