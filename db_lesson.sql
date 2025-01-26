@@ -59,7 +59,7 @@ SELECT
 -- A.テーブルからname、email、ageの3つのカラムのを指定してレコード1行ずつ表示します。
 
 FROM
-  `people`  
+  `people`
 -- A.peopleテーブルからカラムとレコードを表示します。
 
 WHERE
@@ -87,7 +87,9 @@ SELECT p.name, d.name, r.content
 from departments d join people p on d.department_id = p.department_id
 JOIN reports r ON p.person_id = r.person_id;
 
--- Q11
+-- Q11(答えは2つあります。)
 SELECT p.name, r.content
-FROM people p JOIN reports r ON p.person_id = r.person_id
-WHERE r.content IS NULL;
+FROM people p left outer JOIN reports r ON p.person_id = r.person_id;
+
+SELECT p.name, r.content
+FROM people p right outer JOIN reports r ON p.person_id = r.person_id;
